@@ -1,96 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Management API Overview</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #343a40;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: #495057;
+            margin-top: 30px;
+        }
+        h3 {
+            font-size: 1.5rem;
+            color: #6c757d;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 1rem;
+            color: #212529;
+            line-height: 1.6;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        ul li {
+            font-size: 1rem;
+            color: #495057;
+            margin-bottom: 10px;
+        }
+        code {
+            background-color: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #d63384;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #adb5bd;
+        }
+    </style>
+</head>
+<body>
     <div class="container mt-5">
-      <h1 class="mb-4">School Management API Project</h1>
+        <h1 class="mb-4">School Management API Project</h1>
 
-      <h2>Project Overview</h2>
-      <p>
-        This project involves developing a set of APIs using Node.js,
-        Express.js, and MySQL to manage school data. The system allows users to
-        add new schools and retrieve a list of schools sorted by proximity to a
-        user-specified location.
-      </p>
+        <h2>Project Overview</h2>
+        <p>APIs developed using Node.js, Express.js, and MySQL to manage school data, including adding new schools and retrieving them based on proximity to a specified location.</p>
 
-      <h2>Implemented APIs</h2>
-      <h3>1. Add School API</h3>
-      <p><strong>Endpoint:</strong> <code>/addSchool</code></p>
-      <p><strong>Method:</strong> POST</p>
-      <p>
-        <strong>Functionality:</strong> This API adds a new school to the
-        database. The input data is validated to ensure that all fields are
-        non-empty and of the correct data types.
-      </p>
+        <h2>Implemented APIs</h2>
+        <h3>1. Add School API</h3>
+        <p><strong>Endpoint:</strong> <code>https://educase-india-assignment-kappa.vercel.app/addSchool</code></p>
+        <p><strong>Method:</strong> POST</p>
+        <p>Adds a new school after validating the input data.</p>
 
-      <h3>2. List Schools API</h3>
-      <p><strong>Endpoint:</strong> <code>/listSchools</code></p>
-      <p><strong>Method:</strong> GET</p>
-      <p>
-        <strong>Functionality:</strong> This API fetches all schools from the
-        database and sorts them based on proximity to the user's specified
-        latitude and longitude. The sorted list is returned as a response.
-      </p>
+        <h3>2. List Schools API</h3>
+        <p><strong>Endpoint:</strong> <code>https://educase-india-assignment-kappa.vercel.app/listSchools</code></p>
+        <p><strong>Method:</strong> GET</p>
+        <p>Retrieves and sorts schools based on proximity to user's location.</p>
 
-      <h2>Additional Routes</h2>
-      <h3>1. Delete All Schools API</h3>
-      <p><strong>Endpoint:</strong> <code>/deleteAllSchools</code></p>
-      <p><strong>Method:</strong> DELETE</p>
-      <p>
-        <strong>Functionality:</strong> This API deletes all schools from the
-        database.
-      </p>
+        <h2>Additional Routes</h2>
+        <h3>1. Delete All Schools API</h3>
+        <p><strong>Endpoint:</strong> <code>https://educase-india-assignment-kappa.vercel.app/deleteAllSchools</code></p>
+        <p><strong>Method:</strong> DELETE</p>
+        <p>Deletes all schools from the database.</p>
 
-      <h3>2. Delete School by ID API</h3>
-      <p><strong>Endpoint:</strong> <code>/deleteSchool</code></p>
-      <p><strong>Method:</strong> DELETE</p>
-      <p><strong>Payload:</strong> { id: <em>school_id</em> }</p>
-      <p>
-        <strong>Functionality:</strong> This API deletes a specific school from
-        the database based on the provided ID.
-      </p>
+        <h3>2. Delete School by ID API</h3>
+        <p><strong>Endpoint:</strong> <code>https://educase-india-assignment-kappa.vercel.app/deleteSchool</code></p>
+        <p><strong>Method:</strong> DELETE</p>
+        <p>Deletes a school based on the provided ID.</p>
 
-      <h2>Packages Used</h2>
-      <ul>
-        <li><strong>express:</strong> Web framework for Node.js.</li>
-        <li>
-          <strong>mysql2:</strong> MySQL client for Node.js for connecting and
-          querying the database.
-        </li>
+        <h2>Packages Used</h2>
+        <ul>
+            <li>express</li>
+            <li>mysql2</li>
+            <li>body-parser</li>
+            <li>dotenv</li>
+            <li>ejs</li>
+        </ul>
 
-        <li>
-          <strong>dotenv:</strong> Loads environment variables from a .env file.
-        </li>
-        <li>
-          <strong>ejs:</strong> Embedded JavaScript templates to render HTML.
-        </li>
-      </ul>
+        <h2>Hosting and Deployment</h2>
+        <p>APIs deployed on Vercel. The live endpoints are accessible for testing.</p>
 
-      <h2>Hosting and Deployment</h2>
-      <p>
-        The APIs have been deployed on [Your Hosting Service]. The live API
-        endpoints are accessible for testing purposes.
-      </p>
+        <h2>Postman Collection</h2>
+        <p>A Postman collection is available for testing the APIs.</p>
 
-      <h2>Postman Collection</h2>
-      <p>
-        A Postman collection has been created for both the 'Add School' and
-        'List Schools' APIs. The collection includes example requests and
-        documents expected responses. The collection can be accessed via [Share
-        Link] or has been shared via email.
-      </p>
-
-      <footer class="mt-5">
-        <p>© 2024 Your Name. All rights reserved.</p>
-      </footer>
+        <footer class="mt-5">
+            <p>© 2024 Rohan Vinkare. All rights reserved.</p>
+        </footer>
     </div>
-  </body>
+</body>
 </html>
