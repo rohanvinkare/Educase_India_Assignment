@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Management API Overview</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">School Management API Project</h1>
+
+      <h2>Project Overview</h2>
+      <p>
+        This project involves developing a set of APIs using Node.js,
+        Express.js, and MySQL to manage school data. The system allows users to
+        add new schools and retrieve a list of schools sorted by proximity to a
+        user-specified location.
+      </p>
+
+      <h2>Implemented APIs</h2>
+      <h3>1. Add School API</h3>
+      <p><strong>Endpoint:</strong> <code>/addSchool</code></p>
+      <p><strong>Method:</strong> POST</p>
+      <p>
+        <strong>Functionality:</strong> This API adds a new school to the
+        database. The input data is validated to ensure that all fields are
+        non-empty and of the correct data types.
+      </p>
+
+      <h3>2. List Schools API</h3>
+      <p><strong>Endpoint:</strong> <code>/listSchools</code></p>
+      <p><strong>Method:</strong> GET</p>
+      <p>
+        <strong>Functionality:</strong> This API fetches all schools from the
+        database and sorts them based on proximity to the user's specified
+        latitude and longitude. The sorted list is returned as a response.
+      </p>
+
+      <h2>Additional Routes</h2>
+      <h3>1. Delete All Schools API</h3>
+      <p><strong>Endpoint:</strong> <code>/deleteAllSchools</code></p>
+      <p><strong>Method:</strong> DELETE</p>
+      <p>
+        <strong>Functionality:</strong> This API deletes all schools from the
+        database.
+      </p>
+
+      <h3>2. Delete School by ID API</h3>
+      <p><strong>Endpoint:</strong> <code>/deleteSchool</code></p>
+      <p><strong>Method:</strong> DELETE</p>
+      <p><strong>Payload:</strong> { id: <em>school_id</em> }</p>
+      <p>
+        <strong>Functionality:</strong> This API deletes a specific school from
+        the database based on the provided ID.
+      </p>
+
+      <h2>Packages Used</h2>
+      <ul>
+        <li><strong>express:</strong> Web framework for Node.js.</li>
+        <li>
+          <strong>mysql2:</strong> MySQL client for Node.js for connecting and
+          querying the database.
+        </li>
+
+        <li>
+          <strong>dotenv:</strong> Loads environment variables from a .env file.
+        </li>
+        <li>
+          <strong>ejs:</strong> Embedded JavaScript templates to render HTML.
+        </li>
+      </ul>
+
+      <h2>Hosting and Deployment</h2>
+      <p>
+        The APIs have been deployed on [Your Hosting Service]. The live API
+        endpoints are accessible for testing purposes.
+      </p>
+
+      <h2>Postman Collection</h2>
+      <p>
+        A Postman collection has been created for both the 'Add School' and
+        'List Schools' APIs. The collection includes example requests and
+        documents expected responses. The collection can be accessed via [Share
+        Link] or has been shared via email.
+      </p>
+
+      <footer class="mt-5">
+        <p>© 2024 Your Name. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
